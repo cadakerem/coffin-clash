@@ -6,14 +6,35 @@ using System.Linq;
 
 namespace CoffinGame
 {
-    public class Bullet {
-        public Vector2 Position;
-        public Vector2 Velocity;
-        public bool FromPlayer1; 
-        public Rectangle Bounds => new Rectangle((int)Position.X, (int)Position.Y, 20, 5);
-        public void Update(float dt) { Position += Velocity * dt; }
-        public void Draw(SpriteBatch sb, Texture2D pixel) { sb.Draw(pixel, Bounds, Color.Yellow); }
+    public class Bullet 
+{
+    public Vector2 Position;
+    public Vector2 Velocity;
+    public bool FromPlayer1; 
+
+    public Rectangle Bounds => new Rectangle((int)Position.X, (int)Position.Y, 45, 15);
+
+    public void Update(float dt) 
+    { 
+        Position += Velocity * dt; 
     }
+
+    public void Draw(SpriteBatch sb, Texture2D arrowTexture) 
+    {
+        SpriteEffects effect = FromPlayer1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+
+        sb.Draw(
+            arrowTexture,
+            Bounds,
+            null,
+            Color.White,
+            0f,
+            Vector2.Zero,
+            effect,
+            0f
+        );
+    }
+}
 
     public class Game1 : Game
     {
@@ -26,8 +47,8 @@ namespace CoffinGame
         private Texture2D towerUpgrade1;
         private Texture2D towerUpgrade2;
         private Texture2D backgroundGothic;
-
         private Texture2D skelWalk, skelAttack, skelDie;
+        private Texture2D arroowTexture;
 
         enum GameState { Menu, Combat, Shop, Invasion, GameOver } //states
         GameState _currentState = GameState.Menu;
@@ -62,8 +83,8 @@ namespace CoffinGame
 
         private void ResetGame()
         {
-            player1 = new Tower(10, 850); 
-            player2 = new Tower(1660, 850); 
+            player1 = new Tower(10, 900); 
+            player2 = new Tower(1660, 900); 
             
             mainCoffin = new Coffin(new Vector2(848, 850), coffinTexture);
             mainCoffin.Health = 150f; // coffin hp
@@ -89,6 +110,7 @@ namespace CoffinGame
             skelWalk = Content.Load<Texture2D>("Skeleton_01_White_Walk");
             skelAttack = Content.Load<Texture2D>("Skeleton_01_White_Attack1");
             skelDie = Content.Load<Texture2D>("Skeleton_01_White_Die");
+            arroowTexture = Content.Load<Texture2D>("Arroow");
         }
 
         protected override void Update(GameTime gameTime)
@@ -204,7 +226,7 @@ namespace CoffinGame
         // bullet system
         private void FireBullet(bool fromP1)
         {
-            Vector2 start = fromP1 ? new Vector2(player1.Bounds.Right - 30, 810) : new Vector2(player2.Bounds.Left + 10, 810);
+            Vector2 start = fromP1 ? new Vector2(player1.Bounds.Right - 55, 770) : new Vector2(player2.Bounds.Left + 10, 770);
             Vector2 velocity = fromP1 ? new Vector2(1600f, 0) : new Vector2(-1600f, 0);
             bullets.Add(new Bullet { Position = start, Velocity = velocity, FromPlayer1 = fromP1 });
         }
@@ -286,7 +308,7 @@ namespace CoffinGame
 
                 mainCoffin.Draw(_spriteBatch, _pixel);
                 foreach (Monster m in monsters) m.Draw(_spriteBatch, _pixel);
-                foreach (Bullet b in bullets) b.Draw(_spriteBatch, _pixel);
+                foreach (Bullet b in bullets) b.Draw(_spriteBatch, arroowTexture);
 
                 _spriteBatch.DrawString(_font, "GOLD: " + p1Gold, new Vector2(50, 20), Color.Gold);
                 _spriteBatch.DrawString(_font, "GOLD: " + p2Gold, new Vector2(1730, 20), Color.Gold);
@@ -309,7 +331,7 @@ namespace CoffinGame
                 }
             }
             _spriteBatch.End();
-            base.Update(gameTime);
+            base.Draw(gameTime);
         }
     }
 }
