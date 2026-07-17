@@ -26,6 +26,6 @@ Whoever's tower runs out of health first loses.
 - **MonoGame Framework**
 
 ## 🚀 Getting Started
-1. Clone this repository: `git clone https://github.com/CadaKerem/coffin-clash.git`
+1. Clone this repository: `git clone https://github.com/cadakerem/coffin-clash.git`
 2. Open the `.sln` solution file in **Visual Studio**.
 3. Restore NuGet packages, build, and run the project! (All necessary MonoGame Content assets are included).
