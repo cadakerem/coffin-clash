@@ -2,7 +2,7 @@
 
 > A 2-player local combat game where you push a coffin toward your rival — then defend your tower from what crawls out of it.
 
-*(Oyun içi görseller ve GIF'ler daha sonra eklenecek)*
+![Gameplay](coffin-clash.gif)
 
 ## 🎮 About The Game
 Coffin Clash is a local 2-player game built around a tug-of-war coffin and a wave-defense twist. Two towers face off with a coffin caught between them. Firing arrows at the coffin knocks it toward your opponent's side — land enough hits and it slams into their tower.
