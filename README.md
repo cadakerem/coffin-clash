@@ -33,7 +33,7 @@ Whoever's tower runs out of health first loses.
 ## 🧑‍💻 Developer & Contributions
 Developed by Kerem Barbaros Karnabat (@cadakerem).
 
-> **Note on Repository Structure:** [TODO: Add any specific notes about the repository structure here, e.g., source vs build artifacts.]
+> **Note on Repository Structure:** This Unity-based multiplayer/co-op game houses all of its networked logic, prefabs, and models within the `Assets/` directory. The project is designed to be built via the standard Unity build pipeline for target platforms.
 
 Contributions, issues, and feature requests are welcome! Feel free to check the [Issues page](../../issues).
 
