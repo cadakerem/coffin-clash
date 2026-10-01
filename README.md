@@ -31,7 +31,7 @@ Whoever's tower runs out of health first loses.
 3. Restore NuGet packages, build, and run the project! (All necessary MonoGame Content assets are included).
 
 ## 🧑‍💻 Developer & Contributions
-Developed by Kerem Barbaros Karnabat (@cadakerem).
+Developed by Kerem Barbaros Karnabat ([@cadakerem](https://github.com/cadakerem)).
 
 > **Note on Repository Structure:** This Unity-based multiplayer/co-op game houses all of its networked logic, prefabs, and models within the `Assets/` directory. The project is designed to be built via the standard Unity build pipeline for target platforms.
 
