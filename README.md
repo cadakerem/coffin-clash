@@ -1,4 +1,4 @@
-# Coffin Clash
+﻿# Coffin Clash
 
 > A 2-player local combat game where you push a coffin toward your rival — then defend your tower from what crawls out of it.
 
@@ -33,9 +33,10 @@ Whoever's tower runs out of health first loses.
 ## 🧑‍💻 Developer & Contributions
 Developed by Kerem Barbaros Karnabat ([@cadakerem](https://github.com/cadakerem)).
 
-> **Note on Repository Structure:** This Unity-based multiplayer/co-op game houses all of its networked logic, prefabs, and models within the `Assets/` directory. The project is designed to be built via the standard Unity build pipeline for target platforms.
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [Issues page](../../issues).
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [Issues page](https://github.com/cadakerem/Coffin-Clash/issues).
 
 ## 📜 License
-This project is licensed under the [MIT License](LICENSE).
+Copyright (c) 2026 Kerem Barbaros Karnabat. All Rights Reserved.
+This project and its contents are not licensed for reuse or redistribution without explicit permission.
