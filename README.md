@@ -1,4 +1,4 @@
-﻿# Coffin Clash
+# Coffin Clash
 
 > A 2-player local combat game where you push a coffin toward your rival — then defend your tower from what crawls out of it.
 
@@ -38,5 +38,4 @@ Developed by Kerem Barbaros Karnabat ([@cadakerem](https://github.com/cadakerem)
 Contributions, issues, and feature requests are welcome! Feel free to check the [Issues page](https://github.com/cadakerem/Coffin-Clash/issues).
 
 ## 📜 License
-Copyright (c) 2026 Kerem Barbaros Karnabat. All Rights Reserved.
-This project and its contents are not licensed for reuse or redistribution without explicit permission.
+This project is licensed under the [MIT License with Commons Clause Condition v1.0](LICENSE) - free for personal and non-commercial play and study. Commercial sale, distribution, or repackaging for profit is strictly prohibited.
