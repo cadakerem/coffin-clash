@@ -38,4 +38,4 @@ Developed by Kerem Barbaros Karnabat ([@cadakerem](https://github.com/cadakerem)
 Contributions, issues, and feature requests are welcome! Feel free to check the [Issues page](https://github.com/cadakerem/Coffin-Clash/issues).
 
 ## 📜 License
-This project is licensed under the [MIT License with Commons Clause Condition v1.0](LICENSE) - free for personal and non-commercial play and study. Commercial sale, distribution, or repackaging for profit is strictly prohibited.
+This project is licensed under the [MIT License](LICENSE). Commercial sale, distribution, or repackaging for profit is strictly prohibited.
